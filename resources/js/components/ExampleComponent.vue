@@ -18,6 +18,15 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+
+            /*
+            const annotatorApp = new annotator.App();
+            annotatorApp.include(annotator.ui.main);
+            annotatorApp.include(annotator.storage.http);
+            annotatorApp.start();
+            */
+
+            console.log('test');
         }
     }
 </script>
