@@ -4,7 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+console.log('loading...');
+
 require('./bootstrap');
+// require('../../node_modules/annotator');
 
 window.Vue = require('vue');
 
@@ -30,3 +33,14 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+console.log('loading annotator');
+
+/*
+const annotatorApp = new annotator.App();
+annotatorApp.include(annotator.ui.main);
+annotatorApp.include(annotator.storage.http);
+annotatorApp.start();
+
+console.log(annotatorApp);
+*/

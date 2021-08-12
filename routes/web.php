@@ -13,24 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Auth::routes();
 
-Auth::routes();
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('/document', 'DocumentController');
+// Route::resource('/document', 'DocumentController');
+Route::resource('/signup', 'SignupController');
 
 //https://quantizd.com/google-drive-client-api-with-laravel/
-Route::get('/login/google', 'Auth\LoginController@redirectToGoogleProvider'); 
-Route::get('login/google/callback', 'Auth\LoginController@handleProviderGoogleCallback');
-
-/*
-Route::get('/drive', 'DriveController@getDrive'); // retreive folders 
-Route::get('/drive/upload', 'DriveController@uploadFile'); // File upload form 
-Route::post('/drive/upload', 'DriveController@uploadFile'); // Upload file to Drive from Form 
-Route::get('/drive/create', 'DriveController@create'); // Upload file to Drive from Storage 
-Route::get('/drive/delete/{id}', 'DriveController@deleteFile'); // Delete file or folder
-*/
+// Route::get('/login/google', 'Auth\LoginController@redirectToGoogleProvider');
+// Route::get('login/google/callback', 'Auth\LoginController@handleProviderGoogleCallback');
